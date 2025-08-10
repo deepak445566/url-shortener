@@ -10,7 +10,10 @@ const app = express();
 app.use(cors({
   origin: 'https://jolly-marshmallow-1f996b.netlify.app',
   methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+  credentials: true
 }));
+
 
 app.use(express.json());
 const port = process.env.PORT || 5000;
