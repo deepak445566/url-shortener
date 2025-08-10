@@ -8,7 +8,7 @@ function App() {
   const handle = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/short', { longUrl });
+      const res = await axios.post('https://url-shortener-1-te56.onrender.com/api/short', { longUrl });
       setShortUrl(res.data.shortUrl);
       setLongUrl('');
     } catch (error) {

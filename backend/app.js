@@ -7,7 +7,11 @@ const { nanoid } = require('nanoid'); // ✅ sahi import
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://jolly-marshmallow-1f996b.netlify.app',
+  methods: ['GET', 'POST'],
+}));
+
 app.use(express.json());
 const port = process.env.PORT || 5000;
 
